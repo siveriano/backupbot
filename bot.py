@@ -2,16 +2,13 @@
 # -*- coding: utf-8 -*-
 import telebot
 from telebot import types
-import datetime
-from telegramcalendar import create_calendar
+#import datetime
+#from telegramcalendar import create_calendar
 
 bot = telebot.TeleBot("262576272:AAH4_ojT5js4M-k4pmVarx-BUCUXMN4UUwQ")
 current_shown_dates={}
 
-@bot.message_handler(regexp="mamon")
-def handle_messageExp(m):
-    cid = m.chat.id
-    bot.send_message(cid, "eso no se dice")
+
 	
 
 @bot.message_handler(commands=['wtf'])
@@ -27,19 +24,8 @@ def command_repite(m):
     cnombre = m.from_user.first_name
     bot.send_message(cid, " Pa cabrona la madre de: " + cnombre )
 
-@bot.message_handler(commands=['haha'])
-def command_prueba(m):
-    cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
-    bot.send_photo( cid, open( 'roto2.jpg', 'rb')); # Con la función 'send_photo()'
 
-@bot.message_handler(commands=['t_d_s_p_t_s'])
-def command_todas(m):
-    cid = m.chat.id # Guardamos el ID de la conversación para poder responder.
-    cnombre = m.from_user.first_name
-    bot.send_message(cid, " Menos la madre de: " + cnombre )
-    bot.send_photo( cid, open( 'putaTwitter.jpg', 'rb')); # Con la función 'send_photo()'
-    bot.send_message(cid, " Pd: tu hermana si: " )
-
+"""
 @bot.message_handler(commands=['calendar'])
 def get_calendar(message):
     now = datetime.datetime.now() #Current date
@@ -109,7 +95,7 @@ def previous_month(call):
 def ignore(call):
     bot.answer_callback_query(call.id, text="")
 
-
+"""
 
         
         
